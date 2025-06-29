@@ -8,22 +8,24 @@
 
 :root {
     --ig-primary-background: rgb(0, 0, 0);
-    --ig-secondary-background: rgb(18, 18, 18);
+    --ig-secondary-background: rgb(20, 20, 20);
     --ig-primary-text: rgb(245, 245, 245);
-    --ig-primary-button: rgb(0, 149, 246);
-    --ig-primary-blue: rgb(53, 121, 234);
-}
+    --ig-secondary-text: rgb(170, 170, 170);
+    --ig-primary-blue: rgb(0, 150, 250);
 
-html,
-body {
-    height: 100vh;
-    background-color: var(--ig-primary-background);
-    font-family: "Roboto", sans-serif;
+    ---ig-facebook-blue: rgb(55, 120, 235);
+
+    --ig-separator: rgb(55, 55, 55);
 }
 
 body {
     display: grid;
     place-content: center;
+
+    height: 100vh;
+    background-color: var(--ig-primary-background);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
 }
 
 .container {
@@ -35,47 +37,86 @@ body {
 .login-container,
 .signup-container {
     width: 350px;
-    border: 0.5px solid gray;
+    border: 0.5px solid var(--ig-separator);
 }
 
 .login-container {
     height: 400px;
 
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-logo {
     width: 175px;
     height: 50px;
+
+    margin: 2rem 0;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
 }
 
 .login-form input {
-    height: 20px;
-    padding: 1rem;
+    height: 30px;
+    padding: 1rem 1rem 1rem 0.5rem;
 
     background-color: var(--ig-secondary-background);
     color: var(--ig-primary-text);
+    outline: none;
 
-    border: 0.5px solid gray;
-    border-radius: 1px;
+    border: 0.5px solid var(--ig-separator);
+    border-radius: 5px;
 }
 
-.login-button {
+.login-form button {
     background-color: var(--ig-primary-blue);
     color: var(--ig-primary-text);
+    font-weight: 600;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 
     width: 275px;
     height: 30px;
+    margin-top: 0.5rem;
+}
+
+.or-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 1rem 0 1.5rem 0;
+}
+
+.or-container p {
+    color: var(--ig-secondary-text);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.facebook-login {
+    color: var(---ig-facebook-blue);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.forgot-password {
+    color: var(--ig-primary-text);
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+.forgot-password:hover {
+    color: grey;
 }
 
 .signup-container {
@@ -91,6 +132,25 @@ body {
 }
 
 .signup-container a {
-    color: var(--ig-primary-button);
+    color: var(--ig-primary-blue);
+    font-weight: 600;
     text-decoration: none;
+}
+
+.get-app {
+    color: var(--ig-primary-text);
+    text-align: center;
+
+    margin: 0.5rem 0;
+}
+
+.download-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.download-container img {
+    width: 140px;
+    height: 40px;
 }

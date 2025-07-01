@@ -96,6 +96,10 @@ body {
     margin: 1rem 0 1.5rem 0;
 }
 
+.or-container span {
+    background-color: var(--ig-separator);
+}
+
 .or-container p {
     color: var(--ig-secondary-text);
     font-size: 0.8rem;

@@ -115,12 +115,26 @@ body {
     font-weight: 600;
 }
 
-.facebook-login {
+.facebook-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 0 1rem 0;
+}
+
+.facebook-container a svg {
+    width: 20px;
+    height: 20px;
+
+    fill: var(--ig-facebook-blue);
+}
+
+.facebook-container p {
     color: var(--ig-facebook-blue);
     cursor: pointer;
     font-weight: 600;
-
-    padding: 0.5rem 0 1rem 0;
 }
 
 .forgot-password {

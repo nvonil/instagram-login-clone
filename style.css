@@ -5,17 +5,17 @@
 }
 
 :root {
-    --ig-primary-background: rgb(0, 0, 0);
-    --ig-secondary-background: rgb(20, 20, 20);
+    --primary-background: rgb(0, 0, 0);
+    --secondary-background: rgb(20, 20, 20);
 
-    --ig-primary-text: rgb(245, 245, 245);
-    --ig-secondary-text: rgb(170, 170, 170);
+    --primary-text: rgb(245, 245, 245);
+    --secondary-text: rgb(170, 170, 170);
 
-    --ig-primary-blue: rgb(0, 150, 250);
-    --ig-facebook-blue: rgb(55, 120, 235);
+    --primary-blue: rgb(0, 150, 250);
+    --facebook-blue: rgb(55, 120, 235);
 
-    --ig-input-border: rgb(85, 85, 85);
-    --ig-separator: rgb(55, 55, 55);
+    --primary-border: rgb(55, 55, 55);
+    --secondary-border: rgb(85, 85, 85);
 }
 
 body {
@@ -24,10 +24,12 @@ body {
 
     height: 100vh;
 
-    background-color: var(--ig-primary-background);
+    background-color: var(--primary-background);
     font-family: sans-serif;
     font-size: 0.9rem;
 }
+
+/* Main */
 
 main {
     display: flex;
@@ -41,8 +43,10 @@ main {
 .login-container,
 .signup-container {
     width: 350px;
-    border: 1px solid var(--ig-separator);
+    border: 1px solid var(--primary-border);
 }
+
+/* Login Content */
 
 .login-container {
     padding: 1rem 0;
@@ -52,13 +56,15 @@ main {
     align-items: center;
 }
 
-.login-logo {
+.instagram-logo {
     height: 50px;
 
     margin: 2rem 0;
 }
 
-.login-form {
+/* Form Content */
+
+.form-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -67,25 +73,26 @@ main {
     padding: 0 2.5rem;
 }
 
-.login-form input {
+.form-container input {
     padding: 0.75rem 0 0.75rem 0.5rem;
 
-    background-color: var(--ig-secondary-background);
+    background-color: var(--secondary-background);
     color: var(--ig-primary-text);
     outline: none;
 
-    border: 1px solid var(--ig-input-border);
+    border: 1px solid var(--secondary-border);
     border-radius: 2.5px;
 }
 
-.login-form input::placeholder {
-    color: var(--ig-secondary-text);
+.form-container input::placeholder {
+    color: var(--secondary-text);
     font-size: 0.8rem;
 }
 
-.login-form button {
-    background-color: var(--ig-primary-blue);
-    color: var(--ig-primary-text);
+.form-container button {
+    background-color: var(--primary-blue);
+    color: var(--primary-text);
+    cursor: pointer;
     font-weight: 600;
 
     border: none;
@@ -94,6 +101,8 @@ main {
     height: 30px;
     margin-top: 0.5rem;
 }
+
+/* OR Content */
 
 .or-container {
     display: flex;
@@ -104,17 +113,19 @@ main {
 }
 
 .or-container span {
-    background-color: var(--ig-separator);
+    background-color: var(--primary-border);
 
     width: 100%;
     height: 1px;
 }
 
 .or-container p {
-    color: var(--ig-secondary-text);
+    color: var(--secondary-text);
     font-size: 0.8rem;
     font-weight: 600;
 }
+
+/* Facebook Content */
 
 .facebook-container {
     display: flex;
@@ -122,31 +133,38 @@ main {
     gap: 0.5rem;
 
     padding-bottom: 1rem;
+
+    text-decoration: none;
 }
 
-.facebook-container a svg {
+.facebook-container svg {
     width: 20px;
     height: 20px;
 
-    fill: var(--ig-facebook-blue);
+    fill: var(--facebook-blue);
 }
 
 .facebook-container p {
-    color: var(--ig-facebook-blue);
+    color: var(--facebook-blue);
     cursor: pointer;
     font-weight: 600;
 }
 
+/* Forgot Password Content */
+
 .forgot-password {
-    color: var(--ig-primary-text);
+    color: var(--primary-text);
     font-weight: 600;
+    text-decoration: none;
 
     padding: 0.5rem 0;
 }
 
 .forgot-password:hover {
-    color: var(--ig-secondary-text);
+    color: var(--secondary-text);
 }
+
+/* Sign Up Content */
 
 .signup-container {
     height: 65px;
@@ -156,21 +174,25 @@ main {
 }
 
 .signup-container p {
-    color: var(--ig-primary-text);
+    color: var(--primary-text);
 }
 
 .signup-container a {
-    color: var(--ig-primary-blue);
+    color: var(--primary-blue);
     font-weight: 600;
     text-decoration: none;
 }
 
+/* Get App Content */
+
 .get-app {
-    color: var(--ig-primary-text);
+    color: var(--primary-text);
     text-align: center;
 
     padding: 0.25rem 0;
 }
+
+/* Download Content */
 
 .download-container {
     display: flex;
@@ -182,6 +204,8 @@ main {
     height: 40px;
 }
 
+/* Footer */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -190,7 +214,7 @@ footer {
 }
 
 footer ul {
-    color: var(--ig-secondary-text);
+    color: var(--secondary-text);
     font-size: 0.8rem;
     list-style: none;
 
@@ -205,17 +229,21 @@ footer ul:first-child li {
 }
 
 footer ul:first-child li:hover {
-    border-bottom: 1px solid var(--ig-secondary-text);
+    border-bottom: 1px solid var(--secondary-text);
 }
 
+/* Language Content */
+
 .language-container select {
-    background-color: var(--ig-primary-background);
-    color: var(--ig-secondary-text);
+    background-color: var(--primary-background);
+    color: var(--secondary-text);
     cursor: pointer;
     outline: none;
 
     border: none;
 }
+
+/* Copright Content */
 
 .copyright-container {
     display: flex;
@@ -223,7 +251,7 @@ footer ul:first-child li:hover {
 }
 
 .copyright-container a svg {
-    fill: var(--ig-secondary-text);
+    fill: var(--secondary-text);
     text-decoration: none;
 
     width: 15px;

@@ -16,6 +16,8 @@
 
     --primary-border: rgb(55, 55, 55);
     --secondary-border: rgb(85, 85, 85);
+
+    --primary-divider: rgb(40, 40, 40);
 }
 
 body {
@@ -29,7 +31,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Main */
+/* Main Section */
 
 main {
     display: flex;
@@ -40,31 +42,27 @@ main {
     margin-bottom: 7.5rem;
 }
 
-.login-container,
-.signup-container {
-    width: 350px;
-    border: 1px solid var(--primary-border);
-}
-
-/* Login Content */
+/* Login */
 
 .login-container {
+    width: 350px;
     padding: 1rem 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border: 1px solid var(--primary-border);
 }
 
-.instagram-logo {
+.login-logo {
     height: 50px;
-
     margin: 2rem 0;
 }
 
-/* Form Content */
+/* Form */
 
-.form-container {
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -73,27 +71,28 @@ main {
     padding: 0 2.5rem;
 }
 
-.form-container input {
+.login-form input {
     padding: 0.75rem 0 0.75rem 0.5rem;
 
     background-color: var(--secondary-background);
-    color: var(--ig-primary-text);
+    color: var(--primary-text);
+    font-size: 0.8rem;
     outline: none;
 
     border: 1px solid var(--secondary-border);
     border-radius: 2.5px;
 }
 
-.form-container input::placeholder {
+.login-form input::placeholder {
     color: var(--secondary-text);
     font-size: 0.8rem;
 }
 
-.form-container button {
+.login-form button {
     background-color: var(--primary-blue);
     color: var(--primary-text);
-    cursor: pointer;
     font-weight: 600;
+    opacity: 0.75;
 
     border: none;
     border-radius: 7.5px;
@@ -102,57 +101,55 @@ main {
     margin-top: 0.5rem;
 }
 
-/* OR Content */
+/* Divider */
 
-.or-container {
+.form-divider {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
 
     padding: 1rem 0 2rem 0;
 }
 
-.or-container span {
-    background-color: var(--primary-border);
+.form-divider span:first-child,
+.form-divider span:last-child {
+    background-color: var(--primary-divider);
 
     width: 100%;
     height: 1px;
 }
 
-.or-container p {
+.divider-text {
     color: var(--secondary-text);
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-/* Facebook Content */
+/* Facebook Login */
 
-.facebook-container {
+.login-facebook {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 
     padding-bottom: 1rem;
 
+    color: var(--facebook-blue);
+    cursor: pointer;
+    font-weight: 600;
     text-decoration: none;
 }
 
-.facebook-container svg {
+.login-facebook svg {
     width: 20px;
     height: 20px;
 
     fill: var(--facebook-blue);
 }
 
-.facebook-container p {
-    color: var(--facebook-blue);
-    cursor: pointer;
-    font-weight: 600;
-}
+/* Forgot Password */
 
-/* Forgot Password Content */
-
-.forgot-password {
+.login-forgot {
     color: var(--primary-text);
     font-weight: 600;
     text-decoration: none;
@@ -160,14 +157,17 @@ main {
     padding: 0.5rem 0;
 }
 
-.forgot-password:hover {
+.login-forgot:hover {
     color: var(--secondary-text);
 }
 
-/* Sign Up Content */
+/* Sign Up */
 
 .signup-container {
+    width: 350px;
     height: 65px;
+
+    border: 1px solid var(--primary-border);
 
     display: grid;
     place-content: center;
@@ -183,28 +183,26 @@ main {
     text-decoration: none;
 }
 
-/* Get App Content */
+/* Get the App */
 
-.get-app {
+.getapp-text {
     color: var(--primary-text);
     text-align: center;
 
     padding: 0.25rem 0;
 }
 
-/* Download Content */
-
-.download-container {
+.getapp-container {
     display: flex;
     gap: 0.5rem;
 }
 
-.download-container img {
+.getapp-container a img {
     width: 140px;
     height: 40px;
 }
 
-/* Footer */
+/* Footer Section */
 
 footer {
     display: flex;
@@ -219,6 +217,7 @@ footer ul {
     list-style: none;
 
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -232,9 +231,9 @@ footer ul:first-child li:hover {
     border-bottom: 1px solid var(--secondary-text);
 }
 
-/* Language Content */
+/* Language Select */
 
-.language-container select {
+.footer-language select {
     background-color: var(--primary-background);
     color: var(--secondary-text);
     cursor: pointer;
@@ -243,14 +242,9 @@ footer ul:first-child li:hover {
     border: none;
 }
 
-/* Copright Content */
+/* Github Icon */
 
-.copyright-container {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.copyright-container a svg {
+.footer-github a svg {
     fill: var(--secondary-text);
     text-decoration: none;
 

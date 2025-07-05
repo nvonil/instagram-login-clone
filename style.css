@@ -31,7 +31,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Main Section */
+/* Main */
 
 main {
     display: flex;
@@ -85,14 +85,13 @@ main {
 
 .login-form input::placeholder {
     color: var(--secondary-text);
-    font-size: 0.8rem;
 }
 
 .login-form button {
     background-color: var(--primary-blue);
     color: var(--primary-text);
     font-weight: 600;
-    opacity: 0.75;
+    opacity: 0.7;
 
     border: none;
     border-radius: 7.5px;
@@ -111,8 +110,7 @@ main {
     padding: 1rem 0 2rem 0;
 }
 
-.form-divider span:first-child,
-.form-divider span:last-child {
+.form-divider span:nth-child(odd) {
     background-color: var(--primary-divider);
 
     width: 100%;
@@ -135,7 +133,6 @@ main {
     padding-bottom: 1rem;
 
     color: var(--facebook-blue);
-    cursor: pointer;
     font-weight: 600;
     text-decoration: none;
 }
@@ -202,13 +199,13 @@ main {
     height: 40px;
 }
 
-/* Footer Section */
+/* Footer */
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 footer ul {
@@ -231,7 +228,7 @@ footer ul:first-child li:hover {
     border-bottom: 1px solid var(--secondary-text);
 }
 
-/* Language Select */
+/* Language */
 
 .footer-language select {
     background-color: var(--primary-background);
@@ -242,11 +239,10 @@ footer ul:first-child li:hover {
     border: none;
 }
 
-/* Github Icon */
+/* Github */
 
 .footer-github a svg {
     fill: var(--secondary-text);
-    text-decoration: none;
 
     width: 15px;
     height: 15px;
